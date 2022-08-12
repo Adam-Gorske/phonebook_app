@@ -53,7 +53,7 @@ class User(db.Model, UserMixin):
         return str(uuid.uuid4())
 
     def set_password(self, password):
-        self.ps_hash = generate_password_hash(password)
+        self.pw_hash = generate_password_hash(password)
         return self.pw_hash
 
     def __repr__(self):
