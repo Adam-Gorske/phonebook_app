@@ -16,7 +16,8 @@ class Config():
 # How the app talks to computer
     FLASK_APP = os.getenv('FLASK_APP')
     FLASK_ENV = os.getenv('FLASK_ENV')
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SECRET_KEY = os.environ.get('SECRET_KEY') or "secrets oh secrets"
+    
 # how the app talks to database
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI') or 'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_NOTIFICATIONS = False 
