@@ -12,7 +12,7 @@ import secrets
 
 # set variables for class instantiation
 login_manager = LoginManager()
-ma = Marhsmallow()
+ma = Marshmallow()
 db = SQLAlchemy()
 
 @login_manager.user_loader
